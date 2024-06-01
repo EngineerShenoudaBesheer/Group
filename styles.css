@@ -59,6 +59,17 @@ header h1 {
             background-color: #f0f0f0;
         }
 
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -279,4 +290,3 @@ header h1 {
 .contact-info ul li {
     margin-bottom: 10px; /* Space between list items */
     font-size: 16px; /* Font size for list items */
-}
