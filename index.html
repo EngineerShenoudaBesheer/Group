@@ -192,6 +192,11 @@
             });
         </script>
     </div>
+    <div class="ticker-container">
+    <div class="ticker" id="ticker">
+        <p>🔔 عاجل! مشروع "انتر استار" في الغردقة - استمتع بالفخامة والراحة في أرقى المواقع! 🏡 مساحات متنوعة تبدأ من 32 م² إلى 91 م². خدمات متميزة تشمل حمام سباحة. أسعار تبدا من 22,000 جنيه إلى 25,000 جنيه للمتر المربع ومقدم 30% وتقسيط على سنة 💰✨📅 الاستلام في مايو 2025.  للحجز والاستفسار اتصل بنا الآن! 📞</p>
+    </div>
+</div>
 </div>
 
 <script>
@@ -223,6 +228,7 @@
                 ru: "О нас",
                 de: "Über uns"
             },
+            
             projectsLink: {
                 ar: "مشاريع الشركة",
                 en: "Projects",
@@ -397,11 +403,31 @@
                 en: "Kristine Atef",
                 ru: "Kristine Atef",
                 de: "Kristine Atef"
+            },
+            ticker: {
+                ar: "🔔 عاجل! مشروع   انتر استار في الغردقة - استمتع بالفخامة والراحة في أرقى المواقع! 🏡 مساحات متنوعة تبدأ من 32 م² إلى 91 م². خدمات متميزة تشمل حمام سباحة. أسعار تبدا من 22,000 جنيه إلى 25,000 جنيه للمتر المربع ومقدم 30% وتقسيط على سنة 💰✨📅 الاستلام في مايو 2025.  للحجز والاستفسار اتصل بنا الآن! 📞",
+                en: "🔔 Urgent! InterStar project in Hurghada - Enjoy luxury and comfort in the finest locations! 🏡 Various areas starting from 32 sqm to 91 sqm. Outstanding services include a swimming pool. Prices range from 22,000 EGP to 25,000 EGP per square meter with a 30% down payment and installment over one year 💰✨📅 Delivery in May 2025. For booking and inquiries, contact us now! 📞",
+                ru: "🔔 Срочно! Проект ИнтерСтар в Хургаде - Наслаждайтесь роскошью и комфортом в лучших местах! 🏡 Различные площади от 32 кв.м. до 91 кв.м. Превосходные услуги включают в себя бассейн. Цены начинаются от 22,000 египетских фунтов до 25,000 египетских фунтов за квадратный метр с 30% первоначальным взносом и рассрочкой на один год 💰✨📅 Передача в мае 2025 года. Для бронирования и запросов, свяжитесь с нами сейчас! 📞",
+                de: "🔔 Eilmeldung! Projekt InterStar in Hurghada - Genießen Sie Luxus und Komfort an den besten Standorten! 🏡 Verschiedene Flächen von 32 qm bis 91 qm. Hervorragende Dienstleistungen umfassen einen Swimmingpool. Preise beginnen bei 22.000 bis 25.000 ägyptischen Pfund pro Quadratmeter mit einer Anzahlung von 30% und einer Ratenzahlung über ein Jahr 💰✨📅 Lieferung im Mai 2025. Für Buchungen und Anfragen kontaktieren Sie uns jetzt! 📞"
             }
         };
 
         for (var elementId in elements) {
             document.getElementById(elementId).innerHTML = elements[elementId][language];
+        }
+
+        for (var elementId in elements) {
+        // تحديد العناصر التي تحتوي على النص المراد تحريكه
+            var tickerElements = document.getElementsByClassName('ticker-container')[0].getElementsByClassName('ticker');
+
+            for (var i = 0; i < tickerElements.length; i++) {
+            var tickerElement = tickerElements[i];
+            // تطبيق النص المناسب
+            tickerElement.innerHTML = elements[elementId][language];
+
+            // تأكد من إضافة الكلاس المناسب للغة المختارة
+            tickerElement.classList.add("ticker-" + language);
+            }
         }
     }
 </script>
