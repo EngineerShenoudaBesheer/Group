@@ -8,8 +8,91 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
     direction: rtl;
     text-align: right;
+    position: relative; /* Ensure that the body element can position the ticker */
+    padding-bottom: 50px; /* Add padding to the bottom to make space for the ticker */
 }
 
+.ticker-container {
+    width: 100%;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; /* Ensure it stays on top */
+    padding: 10px 0;
+}
+
+.ticker {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+}
+
+.ticker-ar {
+    display: inline-block;
+    animation: ticker-ar 25s linear infinite;
+}
+
+.ticker-en {
+    display: inline-block;
+    animation: ticker-en 25s linear infinite;
+}
+
+.ticker-ru {
+    display: inline-block;
+    animation: ticker-ru 25s linear infinite;
+}
+
+.ticker-de {
+    display: inline-block;
+    animation: ticker-de 25s linear infinite;
+}
+@keyframes ticker {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes ticker-ar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes ticker-en {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ticker-ru {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ticker-de {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 header {
     background-color: #ffffff;
     color: #333333;
@@ -290,3 +373,25 @@ header h1 {
 .contact-info ul li {
     margin-bottom: 10px; /* Space between list items */
     font-size: 16px; /* Font size for list items */
+
+
+.ticker-container {
+            width: 100%;
+            background-color: #f2f2f2;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 15s linear infinite;
+        }
+        @keyframes ticker {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
