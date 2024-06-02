@@ -29,26 +29,7 @@ body {
     display: inline-block;
     animation: ticker 25s linear infinite;
 }
-
-.ticker-ar {
-    display: inline-block;
-    animation: ticker-ar 25s linear infinite;
-}
-
-.ticker-en {
-    display: inline-block;
-    animation: ticker-en 25s linear infinite;
-}
-
-.ticker-ru {
-    display: inline-block;
-    animation: ticker-ru 25s linear infinite;
-}
-
-.ticker-de {
-    display: inline-block;
-    animation: ticker-de 25s linear infinite;
-}
+/* Ticker styles for different languages */
 @keyframes ticker {
     0% {
         transform: translateX(-100%);
@@ -56,6 +37,11 @@ body {
     100% {
         transform: translateX(100%);
     }
+}
+
+.ticker-ar {
+    animation: ticker-ar 15s linear infinite;
+    direction: rtl;
 }
 
 @keyframes ticker-ar {
@@ -67,7 +53,12 @@ body {
     }
 }
 
-@keyframes ticker-en {
+.ticker-ltr {
+    animation: ticker-ltr 15s linear infinite;
+    direction: ltr;
+}
+
+@keyframes ticker-ltr {
     0% {
         transform: translateX(100%);
     }
@@ -76,23 +67,6 @@ body {
     }
 }
 
-@keyframes ticker-ru {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes ticker-de {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 header {
     background-color: #ffffff;
     color: #333333;
@@ -143,6 +117,7 @@ header h1 {
         }
 
 
+/* أنماط الاتجاه العام للغات */
 .ltr {
     direction: ltr;
     text-align: left;
@@ -395,3 +370,5 @@ header h1 {
                 transform: translateX(-100%);
             }
         }
+
+        
