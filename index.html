@@ -164,7 +164,6 @@
                         <option value="studio">استوديو</option>
                     </select>
                 </div>
-                <h4 id="paymentDetailsTitle">تفاصيل الدفع</h4>
                 <div class="form-group">
                     <label for="paymentMethod" id="paymentMethodLabel">طريقة الدفع المفضلة</label>
                     <select class="form-control" id="paymentMethod" required>
@@ -218,6 +217,7 @@
     }
     
     function changeLanguage(language) {
+
         var elements = {
             pageTitle: {
                 ar: "مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة",
@@ -353,12 +353,6 @@
                 ru: "Тип объекта",
                 de: "Einheitstyp"
             },
-            paymentDetailsTitle: {
-                ar: "تفاصيل الدفع",
-                en: "Payment Details",
-                ru: "Детали оплаты",
-                de: "Zahlungsdetails"
-            },
             paymentMethodLabel: {
                 ar: "طريقة الدفع المفضلة",
                 en: "Preferred Payment Method",
@@ -419,6 +413,24 @@
             ru: "Введите ваш номер телефона",
             de: "Geben Sie Ihre Telefonnummer ein"
         },
+        projectNameOptions: {
+            ar: ["اختر المشروع", "عمارة الانتركونتننتل", "عمارة الميناء", "عمارة كنج توت", "كمبوند مارمينا"],
+            en: ["Select Project", "Intercontinental Building", "Port Building", "King Tut Building", "MarMina Compound"],
+            ru: ["Выберите проект", "Строительство Интерконтиненталь", "Строительство порта", "Строительство Кинг Тут", "Комплекс МарМина"],
+            de: ["Projekt auswählen", "Intercontinental Gebäude", "Hafen Gebäude", "König Tut Gebäude", "MarMina Anlage"]
+        },
+        unitTypeOptions: {
+            ar: ["اختر نوع الوحدة", "شقة", "استوديو"],
+            en: ["Select Unit Type", "Apartment", "Studio"],
+            ru: ["Выберите тип объекта", "Квартира", "Студия"],
+            de: ["Wähle Einheitstyp", "Wohnung", "Studio"]
+        },
+        paymentMethodOptions: {
+            ar: ["نقدي", "تقسيط", "تمويل بنكي"],
+            en: ["Cash", "Installment", "Bank Financing"],
+            ru: ["Наличные", "Рассрочка", "Банковское финансирование"],
+            de: ["Bargeld", "Ratenzahlung", "Bankfinanzierung"]
+        },
         notesPlaceholder: {
             ar: "أدخل أي ملاحظات أو متطلبات خاصة",
             en: "Enter any notes or special requirements",
@@ -432,20 +444,36 @@
                 de: "🔔 Eilmeldung! Projekt InterStar in Hurghada - Genießen Sie Luxus und Komfort an den besten Standorten! 🏡 Verschiedene Flächen von 32 qm bis 91 qm. Hervorragende Dienstleistungen umfassen einen Swimmingpool. Preise beginnen bei 22.000 bis 25.000 ägyptischen Pfund pro Quadratmeter mit einer Anzahlung von 30% und einer Ratenzahlung über ein Jahr 💰✨📅 Lieferung im Mai 2025. Für Buchungen und Anfragen kontaktieren Sie uns jetzt! 📞"
             }
             
+            
         };
-for (var elementId in elements) {
-        if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
+        for (var elementId in elements) {
+            if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
             document.getElementById(elementId).innerHTML = elements[elementId][language];
+            }
         }
-    }
         
         document.getElementById('fullName').placeholder = elements.fullNamePlaceholder[language];
-    document.getElementById('phone').placeholder = elements.phonePlaceholder[language];
-    document.getElementById('notes').placeholder = elements.notesPlaceholder[language];
-    // Update select options
-    updateSelectOptions('projectName', elements.projectNameOptions[language]);
-    updateSelectOptions('unitType', elements.unitTypeOptions[language]);
-    updateSelectOptions('paymentMethod', elements.paymentMethodOptions[language]);
+        document.getElementById('phone').placeholder = elements.phonePlaceholder[language];
+        document.getElementById('notes').placeholder = elements.notesPlaceholder[language];
+        // Update project name select options
+        updateSelectOptions('projectName', elements.projectNameOptions[language]);
+
+        // Update unit type select options
+        updateSelectOptions('unitType', elements.unitTypeOptions[language]);
+
+        // Update payment method select options
+        updateSelectOptions('paymentMethod', elements.paymentMethodOptions[language]);
+
+        function updateSelectOptions(selectId, options) {
+        var selectElement = document.getElementById(selectId);
+        selectElement.innerHTML = ''; // Clear existing options
+
+        options.forEach(function(option) {
+            var optionElement = document.createElement('option');
+            optionElement.textContent = option;
+            selectElement.appendChild(optionElement);
+            });
+        }
     
     
 
