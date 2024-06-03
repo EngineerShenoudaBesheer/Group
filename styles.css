@@ -35,9 +35,9 @@ html[dir="ltr"] body {
         padding: 10px 0;
     }
     .ticker {
+        direction: rtl;
         animation: scroll-right 30s linear infinite;
         animation: scroll-left 30s linear infinite; 
-direction: rtl;
     }
 
     @keyframes scroll-right {
