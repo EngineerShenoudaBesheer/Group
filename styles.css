@@ -6,66 +6,49 @@ body {
     padding: 0px 0px; /* Padding for the content */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    direction: rtl;
+    direction: ltr;
     text-align: right;
     position: relative; /* Ensure that the body element can position the ticker */
     padding-bottom: 50px; /* Add padding to the bottom to make space for the ticker */
 }
-
-.ticker-container {
-    width: 100%;
-    background-color: #f2f2f2;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 9999; /* Ensure it stays on top */
-    padding: 10px 0;
-}
-
-.ticker {
-    animation: ticker-ar 25s linear infinite;
+/* تنسيق الصفحة عند استخدام الاتجاه من اليمين إلى اليسار */
+html[dir="rtl"] body {
     direction: rtl;
-}
-/* Ticker styles for different languages */
-@keyframes ticker {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+    text-align: right;
 }
 
-.ticker-ar {
-    animation: ticker-ar 25s linear infinite;
-    direction: rtl;
-}
-
-@keyframes ticker-ar {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-.ticker-ltr {
-    animation: ticker-ltr 25s linear infinite;
+/* تنسيق الصفحة عند استخدام الاتجاه من اليسار إلى اليمين */
+html[dir="ltr"] body {
     direction: ltr;
+    text-align: left;
 }
+.ticker-container {
+        width: 100%;
+        background-color: #f2f2f2;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9999; /* Ensure it stays on top */
+        padding: 10px 0;
+    }
+    .ticker {
+        animation: scroll-right 30s linear infinite;
+        animation: scroll-left 30s linear infinite; 
 
-@keyframes ticker-ltr {
-    0% {
-        transform: translateX(100%);
     }
-    100% {
-        transform: translateX(-100%);
+
+    @keyframes scroll-right {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+
     }
-}
+    @keyframes scroll-left {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
 
 header {
     background-color: #ffffff;
@@ -348,4 +331,3 @@ header h1 {
 .contact-info ul li {
     margin-bottom: 10px; /* Space between list items */
     font-size: 16px; /* Font size for list items */
-
