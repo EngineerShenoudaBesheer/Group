@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-cMkJib1noPK7pMzFP6x7/M6Id2MaHYw/OgzmCXE6/pwqayB+Zxp62zDAAJi4+MUUJzmSrt+ThOO76T7UK5S3Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body dir="rtl">
+<body dir="rtl" onload="changeLanguage('ar')">
 
 <header>
     <div class="header-content d-flex flex-column align-items-center justify-content-center">
@@ -29,15 +29,15 @@
         <a href="#contact" class="w3-bar-item w3-button" id="contactLink">فريق الدعم</a>
     </div>
     <div class="lang-buttons d-flex justify-content-center mt-3">
-        <button onclick="changeLanguage('ar')" class="btn btn-secondary mx-1">العربية</button>
-        <button onclick="changeLanguage('en')" class="btn btn-secondary mx-1">English</button>
-        <button onclick="changeLanguage('ru')" class="btn btn-secondary mx-1">Русский</button>
-        <button onclick="changeLanguage('de')" class="btn btn-secondary mx-1">Deutsch</button>
+        <button id="lang-ar" onclick="changeLanguage('ar')" class="btn btn-secondary mx-1">العربية</button>
+        <button id="lang-en" onclick="changeLanguage('en')" class="btn btn-secondary mx-1">English</button>
+        <button id="lang-ru" onclick="changeLanguage('ru')" class="btn btn-secondary mx-1">Русский</button>
+        <button id="lang-de" onclick="changeLanguage('de')" class="btn btn-secondary mx-1">Deutsch</button>
     </div>
 </header>
 
 <div class="container-fluid">
-    <div class="w3-container w3-padding-32" id="about">
+    <div class="w3-container w3-padding-32" id="about"  >
         <hr>
         <h2 id="aboutTitle">الشركة</h2>
         <p id="aboutContent">مجموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء.</p>
@@ -150,7 +150,7 @@
                     <label for="projectName" id="projectNameLabel">اسم المشروع</label>
                     <select class="form-control" id="projectName" required>
                         <option value="">اختر المشروع</option>
-                        <option value="intercontinental">عمارة الانتركونتننتل</option>
+                        <option value="intercontinental">عمارة الانتركونتننتال</option>
                         <option value="port">عمارة الميناء</option>
                         <option value="kingTut">عمارة كنج توت</option>
                         <option value="marMinaCompound">كمبوند مارمينا</option>
@@ -414,10 +414,10 @@
             de: "Geben Sie Ihre Telefonnummer ein"
         },
         projectNameOptions: {
-            ar: ["اختر المشروع", "عمارة الانتركونتننتل", "عمارة الميناء", "عمارة كنج توت", "كمبوند مارمينا"],
-            en: ["Select Project", "Intercontinental Building", "Port Building", "King Tut Building", "MarMina Compound"],
-            ru: ["Выберите проект", "Строительство Интерконтиненталь", "Строительство порта", "Строительство Кинг Тут", "Комплекс МарМина"],
-            de: ["Projekt auswählen", "Intercontinental Gebäude", "Hafen Gebäude", "König Tut Gebäude", "MarMina Anlage"]
+            ar: ["اختر المشروع", "عمارة الانتركونتننتال", "عمارة الميناء", "عمارة كنج توت", "كمبوند مارمينا"],
+            en: ["Select Project", "Intercontinental Building", "Al-Mina Building", "King Tut Building", "MarMina Compound"],
+            ru: ["Выберите проект", "Строительство Интерконтиненталь", "Эмарат Аль-Минах", "Строительство Кинг Тут", "Комплекс МарМина"],
+            de: ["Projekt auswählen", "Intercontinental Gebäude", "Al-Mina Gebäude", "König Tut Gebäude", "MarMina Anlage"]
         },
         unitTypeOptions: {
             ar: ["اختر نوع الوحدة", "شقة", "استوديو"],
@@ -446,12 +446,7 @@
             
             
         };
-        for (var elementId in elements) {
-            if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
-            document.getElementById(elementId).innerHTML = elements[elementId][language];
-            }
-        }
-        
+        document.getElementById('pageTitle').innerText = elements.pageTitle[language];
         document.getElementById('fullName').placeholder = elements.fullNamePlaceholder[language];
         document.getElementById('phone').placeholder = elements.phonePlaceholder[language];
         document.getElementById('notes').placeholder = elements.notesPlaceholder[language];
@@ -474,8 +469,20 @@
             selectElement.appendChild(optionElement);
             });
         }
-    
-    
+
+        var ticker = document.getElementById('ticker');
+        if (language === 'ar') {
+            ticker.style.animation = "scroll-left 10s linear infinite";
+        } else {
+            ticker.style.animation = "scroll-right 10s linear infinite";
+        }
+        
+
+        for (var elementId in elements) {
+            if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
+            document.getElementById(elementId).innerHTML = elements[elementId][language];
+            }  
+        }
 
         for (var elementId in elements) {
         // تحديد العناصر التي تحتوي على النص المراد تحريكه
@@ -489,6 +496,12 @@
             // تأكد من إضافة الكلاس المناسب للغة المختارة
             tickerElement.classList.add("ticker-" + language);
             }
+        }
+        document.documentElement.setAttribute('lang', lang);
+        if (lang === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
         }
     }
 </script>
