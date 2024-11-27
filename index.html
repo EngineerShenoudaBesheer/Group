@@ -15,157 +15,178 @@
 </head>
 <body dir="rtl" onload="changeLanguage('ar')">
 
-<header>
-    <div class="header-content d-flex flex-column align-items-center justify-content-center">
-        <img src="logo.jpg" alt="لوجو الشركة" class="logo">
-        <div class="company-info text-center" style="margin-top: 0px; margin-left: 0px;"> <!-- تحريك العناصر إلى الأعلى واليمين -->
-            <h1 id="pageTitle">مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة</h1>
+    <header>
+        <div class="header-content d-flex flex-column align-items-center justify-content-center">
+            <img src="logo.jpg" alt="لوجو الشركة" class="logo">
+            <div class="company-info text-center" style="margin-top: 0px; margin-left: 0px;"> <!-- تحريك العناصر إلى الأعلى واليمين -->
+                <h1 id="pageTitle">مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة</h1>
+            </div>
         </div>
-    </div>
-    <div class="nav-center w3-hide-small mt-3 justify-content-center">
-        <a href="#about" class="w3-bar-item w3-button" id="aboutLink">الشركة</a>
-        <a href="#projects" class="w3-bar-item w3-button" id="projectsLink">مشاريع الشركة</a>
-        <a href="#request" class="w3-bar-item w3-button" id="requestLink">طلب حجز</a>
-        <a href="#contact" class="w3-bar-item w3-button" id="contactLink">فريق الدعم</a>
-    </div>
-    <div class="lang-buttons d-flex justify-content-center mt-3">
-        <button id="lang-ar" onclick="changeLanguage('ar')" class="btn btn-secondary mx-1">العربية</button>
-        <button id="lang-en" onclick="changeLanguage('en')" class="btn btn-secondary mx-1">English</button>
-        <button id="lang-ru" onclick="changeLanguage('ru')" class="btn btn-secondary mx-1">Русский</button>
-        <button id="lang-de" onclick="changeLanguage('de')" class="btn btn-secondary mx-1">Deutsch</button>
-    </div>
-</header>
+        <div class="nav-center w3-hide-small mt-3 justify-content-center">
+            <a href="#about" class="w3-bar-item w3-button" id="aboutLink">الشركة</a>
+            <a href="#projects" class="w3-bar-item w3-button" id="projectsLink">مشاريع الشركة</a>
+            <a href="#request" class="w3-bar-item w3-button" id="requestLink">طلب حجز</a>
+            <a href="#contact" class="w3-bar-item w3-button" id="contactLink">فريق الدعم</a>
+        </div>
+        <div class="lang-buttons d-flex justify-content-center mt-3">
+            <button id="lang-ar" onclick="changeLanguage('ar')" class="btn btn-secondary mx-1">العربية</button>
+            <button id="lang-en" onclick="changeLanguage('en')" class="btn btn-secondary mx-1">English</button>
+            <button id="lang-ru" onclick="changeLanguage('ru')" class="btn btn-secondary mx-1">Русский</button>
+            <button id="lang-de" onclick="changeLanguage('de')" class="btn btn-secondary mx-1">Deutsch</button>
+        </div>
+    </header>
 
-<div class="container-fluid">
-    <div class="w3-container w3-padding-32" id="about"  >
+    <div class="container-fluid">
+        <div class="w3-container w3-padding-32" id="about"  >
+            <hr>
+            <h2 id="aboutTitle">الشركة</h2>
+            <p id="aboutContent">جموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء</p>
+            <h2 id="missionTitle">رسالة الشركة</h2>
+            <p id="missionContent">نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
+            <h2 id="ownerTitle">عن صاحب الشركة</h2>
+            <p id="ownerName"><strong>المهندس الإنشائي شنودة بشير</strong></p>
+            <p id="ownerContent">يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.</p>
+            <div class="contact-info">
+                <h2 id="contactDetailsTitle">لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:</h2>
+                <p id="contactPage">الرسائل على الصفحة: <a href="http://m.me/102254001195838">مجموعة المهنس الإنشائي شنودة بشير</a></p>
+                <p id="address">مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: 
+                    <a href="https://www.google.com/maps?q=27.213655,33.836384" target="_blank">
+                        موقع الشركة
+                    </a>
+                </p>
+            </div>
+        </div>
         <hr>
-        <h2 id="aboutTitle">الشركة</h2>
-        <p id="aboutContent">مجموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء.</p>
-        <h2 id="missionTitle">رسالة الشركة</h2>
-        <p id="missionContent">نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
-        <h2 id="ownerTitle">عن صاحب الشركة</h2>
-        <p id="ownerName"><strong>المهندس الإنشائي شنودة بشير</strong></p>
-        <p id="ownerContent">يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.</p>
-        <div class="contact-info">
-            <h2 id="contactDetailsTitle">لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:</h2>
-            <p id="contactPage">الرسائل على الصفحة: <a href="http://m.me/102254001195838">مجموعة المهنس الإنشائي شنودة بشير</a></p>
-            <p id="address">مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: 
-                <a href="https://www.google.com/maps?q=27.213655,33.836384" target="_blank">
-                    موقع الشركة
-                </a>
-            </p>
-        </div>
-    </div>
-    <hr>
-    <div class="w3-container w3-padding-32" id="projects">
-        <div class="slideshow-container">
-            <!-- Full-width images with number text -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 9</div>
-                <img src="1.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 9</div>
-                <img src="2.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 9</div>
-                <img src="3.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 9</div>
-                <img src="4.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 9</div>
-                <img src="5.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">6 / 9</div>
-                <img src="6.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">7 / 9</div>
-                <img src="7.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">8 / 9</div>
-                <img src="8.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">9 / 9</div>
-                <img src="9.jpg" style="width:100%">
+        <div class="w3-container w3-padding-32" id="projects">
+            <div class="slideshow-container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 9</div>
+                    <img src="1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 9</div>
+                    <img src="2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 9</div>
+                    <img src="3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 9</div>
+                    <img src="4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 9</div>
+                    <img src="5.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 9</div>
+                    <img src="6.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 9</div>
+                    <img src="7.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 9</div>
+                    <img src="8.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 9</div>
+                    <img src="9.jpg" style="width:100%">
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="w3-container w3-padding-32" id="contact">
-        <h2 id="supportTitle">التواصل مع فريق الدعم</h2>
-        <br>
-        <ul class="list-unstyled">
-            
-            
-            <li ><span id="Team1">سارة سرور</span> <a href="https://www.facebook.com/profile.php?id=100081332409604&locale=ar_AR" target="_blank"> Facebook </a><span>|</span>
-                <a href="https://wa.me/201017374071" target="_blank">
-                <i class="fab fa-whatsapp"></i> whatsapp
-            </a>
-            </li>
-            
-            <li ><span id="Team2">كرستين عاطف</span> <a href="https://www.facebook.com/profile.php?id=61559414353294&mibextid=ZbWKwL" target="_blank"> Facebook </a><span>|</span>
-                <a href="https://wa.me/201220770782" target="_blank">
-                <i class="fab fa-whatsapp"></i> whatsapp
-            </a>
-            </li>
-        </ul>
-    </div>
-    <hr>
-    <div class="w3-container w3-padding-32" id="request">
-        <div class="container mt-5">
-            <h2 class="text-center" id="requestFormTitle">استمارة طلب حجز وحدة</h2>
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="fullName" id="fullNameLabel">الاسم الكامل</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone" id="phoneLabel">رقم الهاتف</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" required>
-                </div>
-                <h4 id="unitInfoTitle">معلومات الوحدة المطلوبة</h4>
-                <div class="form-group">
-                    <label for="projectName" id="projectNameLabel">اسم المشروع</label>
-                    <select class="form-control" id="projectName" required>
-                        <option value="">اختر المشروع</option>
-                        <option value="intercontinental">عمارة الانتركونتننتال</option>
-                        <option value="port">عمارة الميناء</option>
-                        <option value="kingTut">عمارة كنج توت</option>
-                        <option value="marMinaCompound">كمبوند مارمينا</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="unitType" id="unitTypeLabel">نوع الوحدة</label>
-                    <select class="form-control" id="unitType" required>
-                        <option value="">اختر نوع الوحدة</option>
-                        <option value="apartment">شقة</option>
-                        <option value="studio">استوديو</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="paymentMethod" id="paymentMethodLabel">طريقة الدفع المفضلة</label>
-                    <select class="form-control" id="paymentMethod" required>
-                        <option>نقدي</option>
-                        <option>تقسيط</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="notes" id="notesLabel">ملاحظات إضافية</label>
-                    <textarea class="form-control" id="notes" rows="3" placeholder="أدخل أي ملاحظات أو متطلبات خاصة"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" id="submitButton">إرسال الطلب</button>
-            </form>
+        <hr>
+        <div class="w3-container w3-padding-32" id="contact">
+            <h2 id="supportTitle">التواصل مع فريق الدعم</h2>
+            <br>
+            <ul class="list-unstyled">
+
+
+                <li>
+                    <span id="Team1">كيرلس نصحي</span> 
+                    <a href="https://www.facebook.com/KerollosRealEstate/" target="_blank">Facebook</a><span>|</span>
+                    <a href="https://wa.me/201044096035" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </li>
+                <li>
+                    <span id="Team2">كرستين عاطف</span> 
+                    <a href="https://www.facebook.com/share/1B3j1jK6sj/" target="_blank">Facebook</a><span>|</span>
+                    <a href="https://wa.me/201044096036" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </li>
+                <li>
+                    <span id="Team3">سارة سرور</span> 
+                    <a href="https://www.facebook.com/profile.php?id=100081332409604&mibextid=ZbWKwL" target="_blank">Facebook</a><span>|</span>
+                    <a href="https://wa.me/201044096037" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </li>
+                <li>
+                    <span id="Team4">الين ناجح</span> 
+                    <a href="https://www.facebook.com/elinnageh" target="_blank">Facebook</a><span>|</span>
+                    <a href="https://wa.me/201044096038" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </li>
+                
+
+
+
+            </ul>
         </div>
-        <script>
-            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        <hr>
+        <div class="w3-container w3-padding-32" id="request">
+            <div class="container mt-5">
+                <h2 class="text-center" id="requestFormTitle">استمارة طلب حجز وحدة</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="fullName" id="fullNameLabel">الاسم الكامل</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" id="phoneLabel">رقم الهاتف</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" required>
+                    </div>
+                    <h4 id="unitInfoTitle">معلومات الوحدة المطلوبة</h4>
+                    <div class="form-group">
+                        <label for="projectName" id="projectNameLabel">اسم المشروع</label>
+                        <select class="form-control" id="projectName" required>
+                            <option value="">اختر المشروع</option>
+                            <option value="intercontinental">عمارة الانتركونتننتال</option>
+                            <option value="port">عمارة الميناء</option>
+                            <option value="kingTut">عمارة كنج توت</option>
+                            <option value="marMinaCompound">كمبوند مارمينا</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="unitType" id="unitTypeLabel">نوع الوحدة</label>
+                        <select class="form-control" id="unitType" required>
+                            <option value="">اختر نوع الوحدة</option>
+                            <option value="apartment">شقة</option>
+                            <option value="studio">استوديو</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod" id="paymentMethodLabel">طريقة الدفع المفضلة</label>
+                        <select class="form-control" id="paymentMethod" required>
+                            <option>نقدي</option>
+                            <option>تقسيط</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes" id="notesLabel">ملاحظات إضافية</label>
+                        <textarea class="form-control" id="notes" rows="3" placeholder="أدخل أي ملاحظات أو متطلبات خاصة"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitButton">إرسال الطلب</button>
+                </form>
+            </div>
+            <script>
+                document.getElementById('bookingForm').addEventListener('submit', function(event) {
                 event.preventDefault(); // منع إرسال النموذج عند الضغط على الزر
                 var fullName = document.getElementById('fullName').value;
                 var phone = document.getElementById('phone').value;
@@ -174,16 +195,22 @@
                 var paymentMethod = document.getElementById('paymentMethod').value;
                 var notes = document.getElementById('notes').value;
                 var message = "الأسم: " + fullName + "\n" + "رقم الهاتف: " + phone + "\n" + "اسم المشروع: " + projectName + "\n" + "نوع الوحدة: " + unitType + "\n" + "طريقة الدفع: " + paymentMethod + "\n" + "معلومة: " + notes + "\n";
-                var whatsappLink = "https://api.whatsapp.com/send?phone=201050911689&text=" + encodeURI(message);
+                var whatsappLink = "https://api.whatsapp.com/send?phone=201044096035&text=" + encodeURI(message);
                 window.open(whatsappLink, '_blank');
             });
         </script>
     </div>
     <div class="ticker-container">
-    <div class="ticker" id="ticker">
-        <p>🔔 عاجل! مشروع "انتر استار" في الغردقة - استمتع بالفخامة والراحة في أرقى المواقع! 🏡 مساحات متنوعة تبدأ من 32 م² إلى 91 م². خدمات متميزة تشمل حمام سباحة. أسعار تبدا من 22,000 جنيه إلى 25,000 جنيه للمتر المربع ومقدم 30% وتقسيط على سنة 💰✨📅 الاستلام في مايو 2025.  للحجز والاستفسار اتصل بنا الآن! 📞</p>
+        <div class="ticker" id="ticker">
+            <p>
+                📞 للحجز والاستفسار اتصل بقسم التسويق: 
+                <span>كيرلس نصحي: 01044096035</span> |
+                <span>كرستين عاطف: 01044096036</span> |
+                <span>سارة سرور: 01044096037</span> |
+                <span>الين ناجح: 01044096038</span>
+            </p>
+        </div>
     </div>
-</div>
 </div>
 
 <script>
@@ -197,7 +224,7 @@
         }
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
+            slides[slideIndex-1].style.display = "block";  
         setTimeout(showSlides, 2000); // تحديد الوقت بين الانتقال بين الصور بالمللي ثانية
     }
     
@@ -357,61 +384,76 @@
                 de: "Anfrage absenden"
             },
             
-            Team1:{
-                ar: "سارة سرور",
-                en: "Sara Sorour",
-                ru: "Sara Sorour",
-                de: "Sara Sorour"
+            Team1: {
+                ar: "كيرلس نصحي",
+                en: "Kerollos Noshy",
+                ru: "Kerollos Noshy",
+                de: "Kerollos Noshy"
             },
-           
-            Team2:{
+
+            Team2: {
                 ar: "كرستين عاطف",
                 en: "Kristine Atef",
                 ru: "Kristine Atef",
                 de: "Kristine Atef"
             },
+
+            Team3: {
+                ar: "سارة سرور",
+                en: "Sara Sorour",
+                ru: "Sara Sorour",
+                de: "Sara Sorour"
+            },
+
+            Team4: {
+                ar: "الين ناجح",
+                en: "Elin Nageh",
+                ru: "Elin Nageh",
+                de: "Elin Nageh"
+            },
+
             fullNamePlaceholder: {
-            ar: "أدخل اسمك الكامل",
-            en: "Enter your full name",
-            ru: "Введите ваше полное имя",
-            de: "Geben Sie Ihren vollständigen Namen ein"
-        },
-        phonePlaceholder: {
-            ar: "أدخل رقم هاتفك",
-            en: "Enter your phone number",
-            ru: "Введите ваш номер телефона",
-            de: "Geben Sie Ihre Telefonnummer ein"
-        },
-        projectNameOptions: {
-            ar: ["اختر المشروع", "عمارة الانتركونتننتال", "عمارة الميناء", "عمارة كنج توت", "كمبوند مارمينا"],
-            en: ["Select Project", "Intercontinental Building", "Al-Mina Building", "King Tut Building", "MarMina Compound"],
-            ru: ["Выберите проект", "Строительство Интерконтиненталь", "Эмарат Аль-Минах", "Строительство Кинг Тут", "Комплекс МарМина"],
-            de: ["Projekt auswählen", "Intercontinental Gebäude", "Al-Mina Gebäude", "König Tut Gebäude", "MarMina Anlage"]
-        },
-        unitTypeOptions: {
-            ar: ["اختر نوع الوحدة", "شقة", "استوديو"],
-            en: ["Select Unit Type", "Apartment", "Studio"],
-            ru: ["Выберите тип объекта", "Квартира", "Студия"],
-            de: ["Wähle Einheitstyp", "Wohnung", "Studio"]
-        },
-        paymentMethodOptions: {
-            ar: ["نقدي", "تقسيط"],
-            en: ["Cash", "Installment"],
-            ru: ["Наличные", "Рассрочка"],
-            de: ["Bargeld", "Ratenzahlung"]
-        },
-        notesPlaceholder: {
-            ar: "أدخل أي ملاحظات أو متطلبات خاصة",
-            en: "Enter any notes or special requirements",
-            ru: "Введите любые заметки или особые требования",
-            de: "Geben Sie eventuelle Anmerkungen oder besondere Anforderungen ein"
-        },
+                ar: "أدخل اسمك الكامل",
+                en: "Enter your full name",
+                ru: "Введите ваше полное имя",
+                de: "Geben Sie Ihren vollständigen Namen ein"
+            },
+            phonePlaceholder: {
+                ar: "أدخل رقم هاتفك",
+                en: "Enter your phone number",
+                ru: "Введите ваш номер телефона",
+                de: "Geben Sie Ihre Telefonnummer ein"
+            },
+            projectNameOptions: {
+                ar: ["اختر المشروع", "عمارة الانتركونتننتال", "عمارة الميناء", "عمارة الحجاز", "كمبوند مارمينا"],
+                en: ["Select Project", "Intercontinental Building", "Al-Mina Building", "Al Hejaz Building", "MarMina Compound"],
+                ru: ["Выберите проект", "Строительство Интерконтиненталь", "Эмарат Аль-Минах", "Здание Аль-Хиджаз", "Комплекс МарМина"],
+                de: ["Projekt auswählen", "Intercontinental Gebäude", "Al-Mina Gebäude", "Al-Hejaz Gebäude", "MarMina Anlage"]
+            },
+            unitTypeOptions: {
+                ar: ["اختر نوع الوحدة", "شقة", "استوديو"],
+                en: ["Select Unit Type", "Apartment", "Studio"],
+                ru: ["Выберите тип объекта", "Квартира", "Студия"],
+                de: ["Wähle Einheitstyp", "Wohnung", "Studio"]
+            },
+            paymentMethodOptions: {
+                ar: ["نقدي", "تقسيط"],
+                en: ["Cash", "Installment"],
+                ru: ["Наличные", "Рассрочка"],
+                de: ["Bargeld", "Ratenzahlung"]
+            },
+            notesPlaceholder: {
+                ar: "أدخل أي ملاحظات أو متطلبات خاصة",
+                en: "Enter any notes or special requirements",
+                ru: "Введите любые заметки или особые требования",
+                de: "Geben Sie eventuelle Anmerkungen oder besondere Anforderungen ein"
+            },
             ticker: {
-    ar: "📞 للحجز والاستفسار اتصل بقسم التسويق: 01017374071 01220770782",
-    en: "📞 For booking and inquiries, contact the marketing department: 01017374071 01220770782",
-    ru: "📞 Для бронирования и вопросов обращайтесь в отдел маркетинга: 01017374071 01220770782",
-    de: "📞 Für Buchungen und Anfragen kontaktieren Sie bitte die Marketingabteilung: 01017374071 01220770782"
-}
+                ar: "📞 للحجز والاستفسار اتصل بقسم التسويق: كيرلس نصحي 01044096035 | كرستين عاطف 01044096036 | سارة سرور 01044096037 | الين ناجح 01044096038",
+                en: "📞 For booking and inquiries, contact the marketing department: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038",
+                ru: "📞 Для бронирования и вопросов обращайтесь в отдел маркетинга: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038",
+                de: "📞 Für Buchungen und Anfragen kontaktieren Sie bitte die Marketingabteilung: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038"
+            }
             
             
         };
@@ -429,50 +471,50 @@
         updateSelectOptions('paymentMethod', elements.paymentMethodOptions[language]);
 
         function updateSelectOptions(selectId, options) {
-        var selectElement = document.getElementById(selectId);
+            var selectElement = document.getElementById(selectId);
         selectElement.innerHTML = ''; // Clear existing options
 
         options.forEach(function(option) {
             var optionElement = document.createElement('option');
             optionElement.textContent = option;
             selectElement.appendChild(optionElement);
-            });
-        }
+        });
+    }
 
-        var ticker = document.getElementById('ticker');
-        if (language === 'ar') {
-            ticker.style.animation = "scroll-left 10s linear infinite";
-        } else {
-            ticker.style.animation = "scroll-right 10s linear infinite";
-        }
-        
+    var ticker = document.getElementById('ticker');
+    if (language === 'ar') {
+        ticker.style.animation = "scroll-left 10s linear infinite";
+    } else {
+        ticker.style.animation = "scroll-right 10s linear infinite";
+    }
 
-        for (var elementId in elements) {
-            if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
+
+    for (var elementId in elements) {
+        if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
             document.getElementById(elementId).innerHTML = elements[elementId][language];
-            }  
-        }
+        }  
+    }
 
-        for (var elementId in elements) {
+    for (var elementId in elements) {
         // تحديد العناصر التي تحتوي على النص المراد تحريكه
-            var tickerElements = document.getElementsByClassName('ticker-container')[0].getElementsByClassName('ticker');
+        var tickerElements = document.getElementsByClassName('ticker-container')[0].getElementsByClassName('ticker');
 
-            for (var i = 0; i < tickerElements.length; i++) {
+        for (var i = 0; i < tickerElements.length; i++) {
             var tickerElement = tickerElements[i];
             // تطبيق النص المناسب
             tickerElement.innerHTML = elements[elementId][language];
 
             // تأكد من إضافة الكلاس المناسب للغة المختارة
             tickerElement.classList.add("ticker-" + language);
-            }
-        }
-        document.documentElement.setAttribute('lang', lang);
-        if (lang === 'ar') {
-            document.documentElement.setAttribute('dir', 'rtl');
-        } else {
-            document.documentElement.setAttribute('dir', 'ltr');
         }
     }
+    document.documentElement.setAttribute('lang', lang);
+    if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+    }
+}
 </script>
 
 </body>
