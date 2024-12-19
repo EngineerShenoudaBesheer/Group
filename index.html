@@ -6,516 +6,550 @@
     <meta name="description" content="شنودة بشير">
     <meta name="description" content="Shenouda Besheer">
     <meta name="google-site-verification" content="MD7_jRq8C_zEXrSlkeIOxyvxQofto6jovErP1gBcPvM" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-cMkJib1noPK7pMzFP6x7/M6Id2MaHYw/OgzmCXE6/pwqayB+Zxp62zDAAJi4+MUUJzmSrt+ThOO76T7UK5S3Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-<body dir="rtl" onload="changeLanguage('ar')">
 
+<body >
     <header>
-        <div class="header-content d-flex flex-column align-items-center justify-content-center">
-            <img src="logo.jpg" alt="لوجو الشركة" class="logo">
-            <div class="company-info text-center" style="margin-top: 0px; margin-left: 0px;"> <!-- تحريك العناصر إلى الأعلى واليمين -->
-                <h1 id="pageTitle">مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة</h1>
-            </div>
+        <div class="logo-container">
+            <img src="logo.png" alt="لوجو الشركة" class="logo-img">
         </div>
-        <div class="nav-center w3-hide-small mt-3 justify-content-center">
-            <a href="#about" class="w3-bar-item w3-button" id="aboutLink">الشركة</a>
-            <a href="#projects" class="w3-bar-item w3-button" id="projectsLink">مشاريع الشركة</a>
-            <a href="#request" class="w3-bar-item w3-button" id="requestLink">طلب حجز</a>
-            <a href="#contact" class="w3-bar-item w3-button" id="contactLink">فريق الدعم</a>
-        </div>
-        <div class="lang-buttons d-flex justify-content-center mt-3">
-            <button id="lang-ar" onclick="changeLanguage('ar')" class="btn btn-secondary mx-1">العربية</button>
-            <button id="lang-en" onclick="changeLanguage('en')" class="btn btn-secondary mx-1">English</button>
-            <button id="lang-ru" onclick="changeLanguage('ru')" class="btn btn-secondary mx-1">Русский</button>
-            <button id="lang-de" onclick="changeLanguage('de')" class="btn btn-secondary mx-1">Deutsch</button>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#projects" data-translate-key="projects">المشاريع</a></li>
+                <li><a href="#about" data-translate-key="about">عن الشركة</a></li>
+                <li><a href="#marketing-team" data-translate-key="marketingTeam">فريق التسويق</a></li>
+                <li><a href="#contact" data-translate-key="contact">تواصل معنا</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <select id="languageSelector">
+                        <option value="ar" data-translate-key="arabic">العربية</option>
+                        <option value="en" data-translate-key="english">English</option>
+                        <option value="de" data-translate-key="german">Deutsch</option>
+                        <option value="ru" data-translate-key="russian">Русский</option>
+                        <option value="fr" data-translate-key="french">Français</option>
+                        <option value="es" data-translate-key="spanish">Español</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container-fluid">
-        <div class="w3-container w3-padding-32" id="about"  >
-            <hr>
-            <h2 id="aboutTitle">الشركة</h2>
-            <p id="aboutContent">جموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء</p>
-            <h2 id="missionTitle">رسالة الشركة</h2>
-            <p id="missionContent">نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
-            <h2 id="ownerTitle">عن صاحب الشركة</h2>
-            <p id="ownerName"><strong>المهندس الإنشائي شنودة بشير</strong></p>
-            <p id="ownerContent">يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.</p>
-            <div class="contact-info">
-                <h2 id="contactDetailsTitle">لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:</h2>
-                <p id="contactPage">الرسائل على الصفحة: <a href="http://m.me/102254001195838">مجموعة المهنس الإنشائي شنودة بشير</a></p>
-                <p id="address">مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: 
-                    <a href="https://www.google.com/maps?q=27.213655,33.836384" target="_blank">
-                        موقع الشركة
-                    </a>
-                </p>
-            </div>
-        </div>
-        <hr>
-        <div class="w3-container w3-padding-32" id="projects">
-            <div class="slideshow-container">
-                <!-- Full-width images with number text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 9</div>
-                    <img src="1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 9</div>
-                    <img src="2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 9</div>
-                    <img src="3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 9</div>
-                    <img src="4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 9</div>
-                    <img src="5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">6 / 9</div>
-                    <img src="6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">7 / 9</div>
-                    <img src="7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">8 / 9</div>
-                    <img src="8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">9 / 9</div>
-                    <img src="9.jpg" style="width:100%">
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="w3-container w3-padding-32" id="contact">
-            <h2 id="supportTitle">التواصل مع فريق الدعم</h2>
-            <br>
-            <ul class="list-unstyled">
 
 
-                <li>
-                    <span id="Team1">كيرلس نصحي</span> 
-                    <a href="https://www.facebook.com/KerollosRealEstate/" target="_blank">Facebook</a><span>|</span>
-                    <a href="https://wa.me/201044096035" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Whatsapp
-                    </a>
-                </li>
-                <li>
-                    <span id="Team2">كرستين عاطف</span> 
-                    <a href="https://www.facebook.com/share/1B3j1jK6sj/" target="_blank">Facebook</a><span>|</span>
-                    <a href="https://wa.me/201044096036" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Whatsapp
-                    </a>
-                </li>
-                <li>
-                    <span id="Team3">سارة سرور</span> 
-                    <a href="https://www.facebook.com/profile.php?id=100081332409604&mibextid=ZbWKwL" target="_blank">Facebook</a><span>|</span>
-                    <a href="https://wa.me/201044096037" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Whatsapp
-                    </a>
-                </li>
-                <li>
-                    <span id="Team4">الين ناجح</span> 
-                    <a href="https://www.facebook.com/elinnageh" target="_blank">Facebook</a><span>|</span>
-                    <a href="https://wa.me/201044096038" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Whatsapp
-                    </a>
-                </li>
-                
+    <p></p>
 
 
-
-            </ul>
-        </div>
-        <hr>
-        <div class="w3-container w3-padding-32" id="request">
-            <div class="container mt-5">
-                <h2 class="text-center" id="requestFormTitle">استمارة طلب حجز وحدة</h2>
-                <form id="bookingForm">
-                    <div class="form-group">
-                        <label for="fullName" id="fullNameLabel">الاسم الكامل</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" id="phoneLabel">رقم الهاتف</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" required>
-                    </div>
-                    <h4 id="unitInfoTitle">معلومات الوحدة المطلوبة</h4>
-                    <div class="form-group">
-                        <label for="projectName" id="projectNameLabel">اسم المشروع</label>
-                        <select class="form-control" id="projectName" required>
-                            <option value="">اختر المشروع</option>
-                            <option value="intercontinental">عمارة الانتركونتننتال</option>
-                            <option value="port">عمارة الميناء</option>
-                            <option value="kingTut">عمارة كنج توت</option>
-                            <option value="marMinaCompound">كمبوند مارمينا</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="unitType" id="unitTypeLabel">نوع الوحدة</label>
-                        <select class="form-control" id="unitType" required>
-                            <option value="">اختر نوع الوحدة</option>
-                            <option value="apartment">شقة</option>
-                            <option value="studio">استوديو</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="paymentMethod" id="paymentMethodLabel">طريقة الدفع المفضلة</label>
-                        <select class="form-control" id="paymentMethod" required>
-                            <option>نقدي</option>
-                            <option>تقسيط</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="notes" id="notesLabel">ملاحظات إضافية</label>
-                        <textarea class="form-control" id="notes" rows="3" placeholder="أدخل أي ملاحظات أو متطلبات خاصة"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submitButton">إرسال الطلب</button>
-                </form>
-            </div>
-            <script>
-                document.getElementById('bookingForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // منع إرسال النموذج عند الضغط على الزر
-                var fullName = document.getElementById('fullName').value;
-                var phone = document.getElementById('phone').value;
-                var projectName = document.getElementById('projectName').value;
-                var unitType = document.getElementById('unitType').value;
-                var paymentMethod = document.getElementById('paymentMethod').value;
-                var notes = document.getElementById('notes').value;
-                var message = "الأسم: " + fullName + "\n" + "رقم الهاتف: " + phone + "\n" + "اسم المشروع: " + projectName + "\n" + "نوع الوحدة: " + unitType + "\n" + "طريقة الدفع: " + paymentMethod + "\n" + "معلومة: " + notes + "\n";
-                var whatsappLink = "https://api.whatsapp.com/send?phone=201044096035&text=" + encodeURI(message);
-                window.open(whatsappLink, '_blank');
-            });
-        </script>
-    </div>
-    <div class="ticker-container">
-        <div class="ticker" id="ticker">
-            <p>
-                📞 للحجز والاستفسار اتصل بقسم التسويق: 
-                <span>كيرلس نصحي: 01044096035</span> |
-                <span>كرستين عاطف: 01044096036</span> |
-                <span>سارة سرور: 01044096037</span> |
-                <span>الين ناجح: 01044096038</span>
-            </p>
-        </div>
-    </div>
+<div class="container">
+    <div class="square" style="background-color: #37B0A7;" onclick="sendWhatsApp('تمويل عقاري')" data-translate-key="mortgage">تمويل عقاري</div>
+    <div class="square" style="background-color: #37B0A7;" onclick="sendWhatsApp('محلات تجارية')" data-translate-key="shops">محلات تجارية</div>
+    <div class="square" style="background-color: #37B0A7;" onclick="sendWhatsApp('تقسيط')" data-translate-key="installments"> وحدات بالتقسيط</div>
 </div>
 
-<script>
-    var slideIndex = 0;
-    showSlides();
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 2000); // تحديد الوقت بين الانتقال بين الصور بالمللي ثانية
-    }
-    
-    function changeLanguage(language) {
 
-        var elements = {
-            pageTitle: {
-                ar: "مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة",
-                en: "Shenouda Bashir Civil Engineering Real Estate Group in Hurghada",
-                ru: "Группа по гражданскому инжинирингу и недвижимости Шенуда Башир в Хургаде",
-                de: "Shenouda Bashir Bauingenieurwesen Immobiliengruppe in Hurghada"
-            },
-            aboutLink: {
-                ar: "الشركة",
-                en: "About Us",
-                ru: "О нас",
-                de: "Über uns"
-            },
+
+
+
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="projects">
+        <h2 data-translate-key="companyPresentation">مجموعة المهندس الانشائي شنودة بشير تقدم</h2>
+
+        <div class="project-list">
+            <!--inter star-->
+            <div class="project">
+                <img src="1.jpg" alt="مشروع الانتر" data-translate-key="projectImage">
+                <h3 data-translate-key="projectTitle">مشروع الانتر استار</h3>
+                <a href="https://maps.app.goo.gl/5FiQYDRrjjeeGjVr5" target="_blank" data-translate-key="projectLocation">
+                    الموقع: خلف مستشفي الحياة - الانتركونتننتل - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('مشروع المارينا')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="projectDescription">متبقي 3 استوديوهات 
+
+                    ✨الاستوديو مساحته 47 متر ،يحتوي على غرفة وصالة و بلكونة علي حمام السباحة.
+
+                    ✨الموقع مميز قريب من كل الخدمات:
+                    1-مستشفى الحياة 
+                    2-بالقرب من شاطئ 9
+                    3-السفارة الروسية 
+
+                    ✨طرق الدفع:
+                    مقدم 50% و الباقي تقسيط على سنة
+                    وديعة صيانة 10% عند الاستلام مدي الحياة
+                </p>
+            </div>
+
+
+            <!--marmina-->
             
-            projectsLink: {
-                ar: "مشاريع الشركة",
-                en: "Projects",
-                ru: "Проекты",
-                de: "Projekte"
-            },
-            requestLink: {
-                ar: "طلب حجز",
-                en: "Booking Request",
-                ru: "Запрос на бронирование",
-                de: "Buchungsanfrage"
-            },
-            contactLink: {
-                ar: "فريق الدعم",
-                en: "Support Team",
-                ru: "Команда поддержки",
-                de: "Support-Team"
-            },
-            aboutTitle: {
-                ar: "الشركة",
-                en: "About Us",
-                ru: "О нас",
-                de: "Über uns"
-            },
-            aboutContent: {
-                ar: "    مجموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء.",
-                en: "The Shenouda Bashir Civil Engineering Real Estate Group is a leading company in the field of contracting and real estate investment in the Red Sea region. The company was established with the aim of providing innovative and integrated residential and commercial solutions that meet the needs of our valued customers. We are committed to delivering the highest levels of quality in all of our projects, with a focus on unique design, premium finishes, and the use of the latest construction technologies.",
-                ru: "Группа по гражданскому инжинирингу и недвижимости Шенуда Башир является ведущей компанией в области строительства и инвестиций в недвижимость на Красном море. Компания была создана с целью предоставления инновационных и комплексных решений в области жилой и коммерческой недвижимости, отвечающих потребностям наших уважаемых клиентов. Мы стремимся обеспечить самые высокие уровни качества во всех наших проектах, с акцентом на уникальный дизайн, премиальные отделочные работы и использование последних технологий в строительстве.",
-                de: "Die Shenouda Bashir Bauingenieurwesen Immobiliengruppe ist ein führendes Unternehmen im Bereich Bau und Immobilieninvestitionen in der Region Rotes Meer. Das Unternehmen wurde mit dem Ziel gegründet, innovative und integrierte Lösungen für Wohn- und Gewerbeimmobilien anzubieten, die den Bedürfnissen unserer geschätzten Kunden gerecht werden. Wir verpflichten uns, in all unseren Projekten höchste Qualitätsstandards zu liefern, mit einem Fokus auf einzigartiges Design, hochwertige Ausstattung und Verwendung modernster Baumethoden."
-            },
-            missionTitle: {
-                ar: "رسالة الشركة",
-                en: "Our Mission",
-                ru: "Наша миссия",
-                de: "Unsere Mission"
-            },
-            missionContent: {
-                ar: "نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.",
-                en: "We strive to achieve customer satisfaction by delivering high-quality real estate projects that contribute to improving the quality of life and enhancing successful investments.",
-                ru: "Мы стремимся достичь удовлетворения клиентов путем предоставления высококачественных проектов в области недвижимости, способствующих улучшению качества жизни и повышению успешных инвестиций.",
-                de: "Wir streben danach, die Zufriedenheit unserer Kunden zu erreichen, indem wir hochwertige Immobilienprojekte liefern, die zur Verbesserung der Lebensqualität und zur Förderung erfolgreicher Investitionen beitragen."
-            },
-            ownerTitle: {
-                ar: "عن صاحب الشركة",
-                en: "About the Owner",
-                ru: "О владельце",
-                de: "Über den Inhaber"
-            },
-            ownerName: {
-                ar: "<strong>المهندس الإنشائي شنودة بشير</strong>",
-                en: "<strong>Engineer Shenouda Basheer</strong>",
-                ru: "<strong>Инженер Шенуда Башир</strong>",
-                de: "<strong>Ingenieur Shenouda Basheer</strong>"
-            },
-            ownerContent: {
-                ar: "يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.",
-                en: "Structural engineer Shenouda Bashir is considered one of the prominent figures in the field of construction and real estate in the Red Sea region. With his extensive experience spanning many years in this field, he is committed to delivering distinguished real estate projects that adhere to the highest international standards.",
-                ru: "Инженер по строительству Шенуда Башир считается одним из выдающихся деятелей в области строительства и недвижимости на Красном море. Обладая обширным опытом, на протяжении многих лет работая в этой области, он стремится к предоставлению выдающихся проектов в области недвижимости, соответствующих самым высоким мировым стандартам.",
-                de: "Der Bauingenieur Shenouda Bashir gilt als eine der prominenten Persönlichkeiten im Bereich Bauwesen und Immobilien im Roten Meer. Mit seiner langjährigen Erfahrung in diesem Bereich ist er bestrebt, herausragende Immobilienprojekte anzubieten, die den höchsten internationalen Standards entsprechen."
-            },
-            contactDetailsTitle: {
-                ar: "لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:",
-                en: "For more details or inquiries, you can contact us via:",
-                ru: "Для получения дополнительной информации или запросов, вы можете связаться с нами по:",
-                de: "Für weitere Details oder Anfragen können Sie uns kontaktieren über:"
-            },
-            contactPage: {
-                ar: "الرسائل على الصفحة: <a href=\"http://m.me/102254001195838\">مجموعة المهنس الإنشائي شنودة بشير</a>",
-                en: "Messages on the page: <a href=\"http://m.me/102254001195838\">Engineer Shenouda Basheer Group</a>",
-                ru: "Сообщения на странице: <a href=\"http://m.me/102254001195838\">Инженерная группа Шенуда Башира</a>",
-                de: "Nachrichten auf der Seite: <a href=\"http://m.me/102254001195838\">Ingenieur Shenouda Basheer Gruppe</a>"
-            },
-            address: {
-                ar: "مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: <a href=\"https://www.google.com/maps?q=27.213655,33.836384\" target=\"_blank\">موقع الشركة</a>",
-                en: "The group's headquarters in Hurghada, Red Sea, Egypt. Our location: <a href=\"https://www.google.com/maps?q=27.213655,33.836384\" target=\"_blank\">The company's location on the map.</a>",
-                ru: "Штаб-квартира группы в Хургаде, Красное море, Египет. Наше местоположение: <a href=\"https://www.google.com/maps?q=27.213655,33.836384\" target=\"_blank\">Местоположение компании на карте.</a>",
-                de: "Der Hauptsitz der Gruppe in Hurghada, Rotes Meer, Ägypten. Unser Standort: <a href=\"https://www.google.com/maps?q=27.213655,33.836384\" target=\"_blank\">Die Lage des Unternehmens auf der Karte.</a>"
-            },
-            supportTitle: {
-                ar: "التواصل مع فريق الدعم",
-                en: "Contact the Support Team",
-                ru: "Свяжитесь с командой поддержки",
-                de: "Kontakt zum Support-Team"
-            },
-            requestFormTitle: {
-                ar: "استمارة طلب حجز وحدة",
-                en: "Unit Booking Request Form",
-                ru: "Форма запроса бронирования",
-                de: "Buchungsanfrageformular"
-            },
-            fullNameLabel: {
-                ar: "الاسم الكامل",
-                en: "Full Name",
-                ru: "Полное имя",
-                de: "Vollständiger Name"
-            },
+            <div class="project">
+                <img src="2.jpg" alt="كمبوند مارمينا" data-translate-key="compoundMarminaAlt">
+                <h3 data-translate-key="compoundMarminaTitle">كمبوند مارمينا</h3>
+                <a href="https://maps.app.goo.gl/Te9ZRbLRehZkBiPs6" target="_blank" data-translate-key="compoundMarminaLocation">
+                    الموقع: بجوار كنيسة مارمينا - خلف مدرية التربية والتعليم - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('كمبوند مارمينا')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="compoundMarminaDescription">🏤كومباوند مارمينا بالغردقة
+                    شقق واستوديوهات سكنية بالتقسيط 🏡
+
+                    🔸 المساحات الشقق المتوفرة:
+                    📐 85م² - 95م² - 100م² - 105م² - 115م²
+
+                    🔸 المساحات الستوديوهات المتوفرة:
+                    📐 55م² - 60م² - 65م² - 70م² 
+
+                    🛋️ تقسيم داخلي مميز: 1 أو 2 أو 3 غرف وصالة، يناسب جميع الاحتياجات 👨‍👩‍👧‍👦
+
+                    🔸 مميزات الكمبوند:
+                    ✨ جميع الشقق تحتوي على بلكونة بإطلالة على حمام السباحة 🌊
+                    ✨ عدد 2 أسانسير لتسهيل التنقل 🛗
+                    ✨ حمام سباحة 🏊‍♂️
+                    ✨ أمن وحراسة 24 ساعة لضمان الأمان 🛡️
+                    ✨ كاميرات مراقبة موزعة في جميع أنحاء الكمبوند 🎥
+
+                    🔸 الأسعار:
+                    💰 سعر المتر على الطوب:
+                    كاش: 12,000 جنيه 💵
+                    تقسيط: 12,500 جنيه 💳
+
+                    💡 نظام التقسيط:
+                    دفع 50% مقدم والباقي على سنة ونصف 📆
+                </p>
+            </div>
+
+            <!--El higaz-->
+            <div class="project">
+                <img src="10.png" alt="عمارة الحجاز" data-translate-key="hegazAlt">
+                <h3 data-translate-key="hegazTitle">عمارة الحجاز</h3>
+                <a href="https://maps.app.goo.gl/uhWY8D9FNcNftSjv7" target="_blank" data-translate-key="hegazLocation">
+                    الموقع: امام شركة المهندس لقطع غيار السيارات - طريق الحجاز - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('عمارة الحجاز')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="hegazDescription">
+                    🏛️شقق للبيع بالحجاز 🏢
+                    📍 قريب من عمارات المحافظة وسوق الغردقة الجديد
+                    📍 أمام شركة المهندس لقطع غيار السيارات بالحجاز
+                    🔑 مميزات العقار:
+                    🔹 العقار مسجل عقد أخضر، ويوفر لك حصة في الأرض 🌍
+                    🔹 العمارة جديدة وتحتوي على أسانسير 🛗
+                    📏 مساحات الشقق المتاحة:
+                    110 - 115 - 120 - 125 متر مربع 🛏️📐
+                    ✨ تقسيم مثالي للعائلات: 3 غرف نوم 👨‍👩‍👧‍👦
+                    💰 الأسعار:
+                    سعر المتر على الطوب: 13,000 جنيه كاش 💵
+                    سعر المتر على الطوب: 13,500 جنيه تقسيط 💳
+                    💡 نظام التقسيط: دفع 50% مقدم والباقي تسهيلات في الدفع على 6 شهور 📆
+                </p>
+            </div>
+
+
+            <!--king tut-->
+            <div class="project">
+                <img src="3.jpg" alt="مشروع كنج توت" data-translate-key="kingTutAlt">
+                <h3 data-translate-key="kingTutTitle">عمارة كنج توت</h3>
+                <a href="https://maps.app.goo.gl/NJSBtDDwrv1BGSdVA" target="_blank" data-translate-key="kingTutLocation">
+                    الموقع: تقسم الوفاء - بجوار فندق كنج توت - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('مشروع كنج توت')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="kingTutDescription">
+                    ✨متبقي عدد 3 محل تجاري
+                    ✨مساحات: 20م - 25م - 58م
+                    ✨مسجل عقد اخضر
+                    ✨يوجد تسهيلات في الدفع و استلام فوري
+                </p>
+            </div>
+
+
+
+            <!--El mina-->
+            <div class="project">
+                <img src="4.jpg" alt="عمارة الميناء" data-translate-key="portBuildingAlt">
+                <h3 data-translate-key="portBuildingTitle">عمارة الميناء</h3>
+                <a href="https://maps.app.goo.gl/NJSBtDDwrv1BGSdVA" target="_blank" data-translate-key="portBuildingLocation">
+                    الموقع: بالقرب من مارينا الغردقة السياحي- الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('عمارة الميناء')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="portBuildingDescription">
+                    🏛️مشروع الميناء بقلب مدينة الغردقة.
+                    🌟بالقرب من المارينا السياحي و بالقرب من جميع الخدمات
+                    🌟 الوحدات السكنية المتبقية للبيع:
+                    🔸 شقة 120م (ثلاث غرف)
+                    🔸 استوديو 55م (غرفة فندقية)
+                    🔸 استوديو 55م (غرفة نوم)
+                    💵تسهيلات في السداد وخصم عالكاش
+                </p>
+            </div>
+
+
+
+
+
+            <!--el gwhara-->
+            <div class="project">
+                <img src="9.jpg" alt="الجوهرة" data-translate-key="jewelBuildingAlt">
+                <h3 data-translate-key="jewelBuildingTitle">عمارة الجوهرة</h3>
+                <a href="https://maps.app.goo.gl/dpaXfZyGu7tq1yW99" target="_blank" data-translate-key="jewelBuildingLocation">
+                    الموقع: الاحياء الرئيسي- بجوار كنيسة الام دولاجي - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <button class="send-button" onclick="askForPropertyType('عمارة الجوهرة')" data-translate-key="sendButton">إرسال</button>
+                <p class="project-description" data-translate-key="jewelBuildingDescription">متبقي محل تجارى بمساحة 80م على الطوب</p>
+            </div>
+
+
+
+
+            <!-- el sfara -->
+            <div class="project">
+                <img src="6.jpg" alt="السفارة" data-translate-key="embassyBuildingAlt">
+                <h3 data-translate-key="embassyBuildingTitle">عمارة الهضبة</h3>
+                <a href="https://maps.app.goo.gl/zKYYd9nqX8ydZU7m6" target="_blank" data-translate-key="embassyBuildingLocation">
+                    الموقع : الهضبة - بجوار السفارة الالمانية - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <p class="project-description" data-translate-key="embassyBuildingDescription">تم بيع جميع الوحدات</p>
+            </div>
+
+            <!-- elmaktab -->
+            <div class="project">
+                <img src="8.jpg" alt="السفارة" data-translate-key="maktabBuildingAlt">
+                <h3 data-translate-key="maktabBuildingTitle">عمارة الهضبة</h3>
+                <a href="https://maps.app.goo.gl/zKYYd9nqX8ydZU7m6" target="_blank" data-translate-key="maktabBuildingLocation">
+                    الموقع : شارع مترو الشيراتون - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <p class="project-description" data-translate-key="maktabBuildingDescription">تم بيع جميع الوحدات</p>
+            </div>
+
+            <!-- el ahia -->
+            <div class="project">
+                <img src="5.jpg" alt="السفارة" data-translate-key="ahiaBuildingAlt">
+                <h3 data-translate-key="ahiaBuildingTitle">عمارة الجوهرة</h3>
+                <a href="https://maps.app.goo.gl/dpaXfZyGu7tq1yW99" target="_blank" data-translate-key="ahiaBuildingLocation">
+                    الموقع: الاحياء الرئيسي- بالغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <p class="project-description" data-translate-key="ahiaBuildingDescription">تم بيع جميع الوحدات</p>
+            </div>
+
+            <!-- elwafa -->
+            <div class="project">
+                <img src="7.jpg" alt="السفارة" data-translate-key="wafaBuildingAlt">
+                <h3 data-translate-key="wafaBuildingTitle">عمارة الوفاء</h3>
+                <a href="https://maps.app.goo.gl/k8CTQJK2JJhwZkyg8" target="_blank" data-translate-key="wafaBuildingLocation">
+                    الموقع : بجوار سور الاذاعة - الغردقة
+                </a>
+                <p></p>
+                <button class="description-button" onclick="toggleDescription(this)" data-translate-key="projectDescriptionButton">الوصف</button>
+                <p class="project-description" data-translate-key="wafaBuildingDescription">تم بيع جميع الوحدات</p>
+            </div>
             
-            phoneLabel: {
-                ar: "رقم الهاتف",
-                en: "Phone Number",
-                ru: "Номер телефона",
-                de: "Telefonnummer"
-            },
-            unitInfoTitle: {
-                ar: "معلومات الوحدة المطلوبة",
-                en: "Required Unit Information",
-                ru: "Информация о требуемом объекте",
-                de: "Erforderliche Einheit Informationen"
-            },
-            projectNameLabel: {
-                ar: "اسم المشروع",
-                en: "Project Name",
-                ru: "Название проекта",
-                de: "Projektname"
-            },
-            unitTypeLabel: {
-                ar: "نوع الوحدة",
-                en: "Unit Type",
-                ru: "Тип объекта",
-                de: "Einheitstyp"
-            },
-            paymentMethodLabel: {
-                ar: "طريقة الدفع المفضلة",
-                en: "Preferred Payment Method",
-                ru: "Предпочтительный метод оплаты",
-                de: "Bevorzugte Zahlungsmethode"
-            },
-            notesLabel: {
-                ar: "ملاحظات إضافية",
-                en: "Additional Notes",
-                ru: "Дополнительные примечания",
-                de: "Zusätzliche Anmerkungen"
-            },
-            submitButton: {
-                ar: "إرسال الطلب",
-                en: "Submit Request",
-                ru: "Отправить запрос",
-                de: "Anfrage absenden"
-            },
-            
-            Team1: {
-                ar: "كيرلس نصحي",
-                en: "Kerollos Noshy",
-                ru: "Kerollos Noshy",
-                de: "Kerollos Noshy"
-            },
+        </div>
+    </section>
 
-            Team2: {
-                ar: "كرستين عاطف",
-                en: "Kristine Atef",
-                ru: "Kristine Atef",
-                de: "Kristine Atef"
-            },
 
-            Team3: {
-                ar: "سارة سرور",
-                en: "Sara Sorour",
-                ru: "Sara Sorour",
-                de: "Sara Sorour"
-            },
 
-            Team4: {
-                ar: "الين ناجح",
-                en: "Elin Nageh",
-                ru: "Elin Nageh",
-                de: "Elin Nageh"
-            },
+    <div id="propertyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" data-translate-key="closeButton">&times;</span>
+            <h3 data-translate-key="propertyModalTitle">ماذا تسال عن؟</h3>
+            <button class="property-option" onclick="sendWhatsappWithType('شقة')" data-translate-key="apartmentOption">شقة</button>
+            <button class="property-option" onclick="sendWhatsappWithType('استوديو')" data-translate-key="studioOption">استوديو</button>
+            <button class="property-option" onclick="sendWhatsappWithType('محل تجارى')" data-translate-key="shopOption">محل تجارى</button>
+        </div>
+    </div>
 
-            fullNamePlaceholder: {
-                ar: "أدخل اسمك الكامل",
-                en: "Enter your full name",
-                ru: "Введите ваше полное имя",
-                de: "Geben Sie Ihren vollständigen Namen ein"
-            },
-            phonePlaceholder: {
-                ar: "أدخل رقم هاتفك",
-                en: "Enter your phone number",
-                ru: "Введите ваш номер телефона",
-                de: "Geben Sie Ihre Telefonnummer ein"
-            },
-            projectNameOptions: {
-                ar: ["اختر المشروع", "عمارة الانتركونتننتال", "عمارة الميناء", "عمارة الحجاز", "كمبوند مارمينا"],
-                en: ["Select Project", "Intercontinental Building", "Al-Mina Building", "Al Hejaz Building", "MarMina Compound"],
-                ru: ["Выберите проект", "Строительство Интерконтиненталь", "Эмарат Аль-Минах", "Здание Аль-Хиджаз", "Комплекс МарМина"],
-                de: ["Projekt auswählen", "Intercontinental Gebäude", "Al-Mina Gebäude", "Al-Hejaz Gebäude", "MarMina Anlage"]
-            },
-            unitTypeOptions: {
-                ar: ["اختر نوع الوحدة", "شقة", "استوديو"],
-                en: ["Select Unit Type", "Apartment", "Studio"],
-                ru: ["Выберите тип объекта", "Квартира", "Студия"],
-                de: ["Wähle Einheitstyp", "Wohnung", "Studio"]
-            },
-            paymentMethodOptions: {
-                ar: ["نقدي", "تقسيط"],
-                en: ["Cash", "Installment"],
-                ru: ["Наличные", "Рассрочка"],
-                de: ["Bargeld", "Ratenzahlung"]
-            },
-            notesPlaceholder: {
-                ar: "أدخل أي ملاحظات أو متطلبات خاصة",
-                en: "Enter any notes or special requirements",
-                ru: "Введите любые заметки или особые требования",
-                de: "Geben Sie eventuelle Anmerkungen oder besondere Anforderungen ein"
-            },
-            ticker: {
-                ar: "📞 للحجز والاستفسار اتصل بقسم التسويق: كيرلس نصحي 01044096035 | كرستين عاطف 01044096036 | سارة سرور 01044096037 | الين ناجح 01044096038",
-                en: "📞 For booking and inquiries, contact the marketing department: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038",
-                ru: "📞 Для бронирования и вопросов обращайтесь в отдел маркетинга: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038",
-                de: "📞 Für Buchungen und Anfragen kontaktieren Sie bitte die Marketingabteilung: Kerollos Noshy 01044096035 | Kristine Atef 01044096036 | Sara Sorour 01044096037 | Elin Nageh 01044096038"
-            }
-            
-            
-        };
-        document.getElementById('pageTitle').innerText = elements.pageTitle[language];
-        document.getElementById('fullName').placeholder = elements.fullNamePlaceholder[language];
-        document.getElementById('phone').placeholder = elements.phonePlaceholder[language];
-        document.getElementById('notes').placeholder = elements.notesPlaceholder[language];
-        // Update project name select options
-        updateSelectOptions('projectName', elements.projectNameOptions[language]);
 
-        // Update unit type select options
-        updateSelectOptions('unitType', elements.unitTypeOptions[language]);
 
-        // Update payment method select options
-        updateSelectOptions('paymentMethod', elements.paymentMethodOptions[language]);
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <video src="55sqr1.mp4" autoplay muted loop></video>
+            <div class="slide-content">
+                <p><strong data-translate-key="areaLabel">المساحة: </strong><span data-translate-key="areaValue">55 متر مربع</span></p>
+                <p><strong data-translate-key="locationLabel">الموقع: </strong><span data-translate-key="locationValue">بجوار المارينا السياحي</span></p>
+                <p><strong data-translate-key="priceLabel">السعر: </strong><span data-translate-key="priceValue">1,650,000 جنيه</span></p>
+                <p><strong data-translate-key="paymentMethodLabel">طريقة الدفع: </strong><span data-translate-key="paymentMethodValue">كاش أو تقسيط</span></p>
+                <div class="buttons">
+                    <button class="button" onclick="sendDetails('55 متر مربع', 'الغردقة - بجوار المارينا السياحي', '1,650,000 جنيه', 'كاش أو تقسيط')" data-translate-key="sendDetailsButton">
+                        إرسال التفاصيل
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        function updateSelectOptions(selectId, options) {
-            var selectElement = document.getElementById(selectId);
-        selectElement.innerHTML = ''; // Clear existing options
+        <!-- Slide 2 -->
+        <div class="slide">
+            <video src="55sqr2.mp4" autoplay muted loop></video>
+            <div class="slide-content">
+                <p><strong data-translate-key="areaLabel">المساحة: </strong><span data-translate-key="areaValue">55 متر مربع</span></p>
+                <p><strong data-translate-key="locationLabel">الموقع: </strong><span data-translate-key="locationValue">بجوار المارينا السياحي</span></p>
+                <p><strong data-translate-key="priceLabel">السعر: </strong><span data-translate-key="priceValue">1,650,000 جنيه</span></p>
+                <p><strong data-translate-key="paymentMethodLabel">طريقة الدفع: </strong><span data-translate-key="paymentMethodValue">كاش أو تقسيط</span></p>
+                <div class="buttons">
+                    <button class="button" onclick="sendDetails('55 متر مربع', 'الغردقة - بجوار المارينا السياحي', '1,650,000 جنيه', 'كاش أو تقسيط')" data-translate-key="sendDetailsButton">
+                        إرسال التفاصيل
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        options.forEach(function(option) {
-            var optionElement = document.createElement('option');
-            optionElement.textContent = option;
-            selectElement.appendChild(optionElement);
+        <!-- Slide 3 -->
+        <div class="slide">
+            <video src="120sqr.mp4" autoplay muted loop></video>
+            <div class="slide-content">
+                <p><strong data-translate-key="areaLabel">المساحة:</strong><span data-translate-key="areaValue">120 متر مربع</span></p>
+                <p><strong data-translate-key="locationLabel">الموقع: </strong><span data-translate-key="locationValue">بجوار المارينا السياحي</span></p>
+                <p><strong data-translate-key="priceLabel">السعر:</strong><span data-translate-key="priceValue">3,360,000 جنيه</span></p>
+                <p><strong data-translate-key="paymentMethodLabel">طريقة الدفع:</strong><span data-translate-key="paymentMethodValue">كاش أو تقسيط</span></p>
+                <div class="buttons">
+                    <button class="button" onclick="sendDetails('120 متر مربع', 'الغردقة - شارع الشيراتون', '1,200,000 جنيه', 'كاش أو تقسيط')" data-translate-key="sendDetailsButton">
+                        إرسال التفاصيل
+                    </button>
+
+                    <div class="hover-images">
+                        <img src="2.jpg" alt="View 1" data-translate-key="view1">
+                        <img src="3.jpg" alt="View 2" data-translate-key="view2">
+                        <img src="4.jpg" alt="View 3" data-translate-key="view3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <video src="102sqr.mp4" autoplay muted loop></video>
+            <div class="slide-content">
+                <p><strong data-translate-key="areaLabel">المساحة:</strong><span data-translate-key="areaValue">120 متر مربع</span></p>
+                <p><strong data-translate-key="locationLabel">الموقع:</strong><span data-translate-key="locationValue">الغردقة - شارع الشيراتون</span></p>
+                <p><strong data-translate-key="priceLabel">السعر:</strong><span data-translate-key="priceValue">4,000,000 جنيه</span></p>
+                <p><strong data-translate-key="paymentMethodLabel">طريقة الدفع:</strong><span data-translate-key="paymentMethodValue">كاش أو تقسيط</span></p>
+                <div class="buttons">
+                    <button class="button" onclick="sendDetails('120 متر مربع', 'الغردقة - شارع الشيراتون', '1,200,000 جنيه', 'كاش أو تقسيط')" data-translate-key="sendDetailsButton">
+                        إرسال التفاصيل
+                    </button>
+
+                    <div class="hover-images">
+                        <img src="2.jpg" alt="View 1" data-translate-key="view1">
+                        <img src="3.jpg" alt="View 2" data-translate-key="view2">
+                        <img src="4.jpg" alt="View 3" data-translate-key="view3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-button" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav-button" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
         });
-    }
+      }
 
-    var ticker = document.getElementById('ticker');
-    if (language === 'ar') {
-        ticker.style.animation = "scroll-left 10s linear infinite";
-    } else {
-        ticker.style.animation = "scroll-right 10s linear infinite";
-    }
+      function changeSlide(direction) {
+          currentSlide = (currentSlide + direction + slides.length) % slides.length;
+          showSlide(currentSlide);
+      }
+
+      function sendDetails(space, location, price, paymentMethod) {
+          const message = `تفاصيل الشقة:\nالمساحة: ${space}\nالموقع: ${location}\nالسعر: ${price}\nطريقة الدفع: ${paymentMethod}`;
+          const phone = "201044096035";
+          alert(`تم إرسال التفاصيل:\n${message}`);
+          window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+      }
+
+    // Initialize the first slide
+      showSlide(currentSlide);
+  </script>
 
 
-    for (var elementId in elements) {
-        if (elements.hasOwnProperty(elementId) && document.getElementById(elementId)) {
-            document.getElementById(elementId).innerHTML = elements[elementId][language];
-        }  
-    }
 
-    for (var elementId in elements) {
-        // تحديد العناصر التي تحتوي على النص المراد تحريكه
-        var tickerElements = document.getElementsByClassName('ticker-container')[0].getElementsByClassName('ticker');
+  <!-- قسم التواصل مع فريق التسويق -->
+  <section id="marketing-team" class="marketing-team">
+    <h2 id="supportTitle" data-translate-key="marketingTitle">التواصل مع فريق التسويق</h2>
+    <br>
+    <ul class="list-unstyled">
+        <!-- kerollos-->
+        <li class="team-member">
+            <div class="team-info">
+                <div class="team-img">
+                    <img src="kerollos.png" alt="كيرلس نصحي" class="team-image">
+                </div>
+                <span id="Team1" class="team-name" data-translate-key="kerollosName">م. كيرلس نصحي</span>
+                <span class="team-role" data-translate-key="kerollosRole">مدير التسويق</span>
+                <div class="team-links">
+                    <a href="https://www.facebook.com/KerollosRealEstate/" target="_blank" class="social-icon" data-translate-key="facebookLink"> 
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <span>|</span>
+                    <a href="https://wa.me/201044096035" target="_blank" class="social-icon" data-translate-key="whatsappLink">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </li>
 
-        for (var i = 0; i < tickerElements.length; i++) {
-            var tickerElement = tickerElements[i];
-            // تطبيق النص المناسب
-            tickerElement.innerHTML = elements[elementId][language];
+        <!-- kirsten -->
+        <li class="team-member">
+            <div class="team-info">
+                <div class="team-img">
+                    <img src="kirsten.png" alt="كرستين عاطف" class="team-image">
+                </div>
+                <span id="Team2" class="team-name" data-translate-key="kirstenName">كرستين عاطف</span>
+                <span class="team-role" data-translate-key="kirstenRole">تسويق</span>
+                <div class="team-links">
+                    <a href="https://www.facebook.com/share/1B3j1jK6sj/" target="_blank" class="social-icon" data-translate-key="facebookLink"> 
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <span>|</span>
+                    <a href="https://wa.me/201044096036" target="_blank" class="social-icon" data-translate-key="whatsappLink">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </li>
 
-            // تأكد من إضافة الكلاس المناسب للغة المختارة
-            tickerElement.classList.add("ticker-" + language);
-        }
-    }
-    document.documentElement.setAttribute('lang', lang);
-    if (lang === 'ar') {
-        document.documentElement.setAttribute('dir', 'rtl');
-    } else {
-        document.documentElement.setAttribute('dir', 'ltr');
-    }
-}
+        <!-- elin -->
+        <li class="team-member">
+            <div class="team-info">
+                <div class="team-img">
+                    <img src="elin.png" alt="الين ناجح" class="team-image">
+                </div>
+                <span id="Team4" class="team-name" data-translate-key="elinName">الين ناجح</span>
+                <span class="team-role" data-translate-key="elinRole">تسويق</span>
+                <div class="team-links">
+                    <a href="https://www.facebook.com/elinnageh" target="_blank" class="social-icon" data-translate-key="facebookLink"> 
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <span>|</span>
+                    <a href="https://wa.me/201044096038" target="_blank" class="social-icon" data-translate-key="whatsappLink">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+
+<section id="contact" class="contact">
+    <h2 data-translate-key="contactTitle">تواصل معنا</h2>
+    <form id="contactForm">
+        <label for="name" data-translate-key="nameLabel">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone" data-translate-key="phoneLabel">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="project" data-translate-key="projectLabel">المشروع:</label>
+        <select id="project" name="project">
+            <option value="hegaz" data-translate-key="hegazOption">كمبوند مارمينا</option>
+            <option value="inter" data-translate-key="interOption">مشروع الانتر</option>
+            <option value="marina" data-translate-key="marinaOption">مشروع المارينا</option>
+            <option value="hegaz" data-translate-key="hegazOption">مشروع الحجاز</option>
+            <option value="king-tut" data-translate-key="kingTutOption">مشروع كنج توت</option>
+        </select>
+
+        <label for="message" data-translate-key="messageLabel">الرسالة:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit" data-translate-key="submitButton">إرسال</button>
+    </form>
+</section>
+
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // منع الإرسال التقليدي للنموذج
+    
+    // جمع البيانات من النموذج
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const project = document.getElementById('project').value;
+    const message = document.getElementById('message').value;
+
+    // تنسيق الرسالة
+    const whatsappMessage = `
+    الاسم: ${name}
+    رقم الهاتف: ${phone}
+    المشروع: ${project}
+    الرسالة: ${message}
+    `;
+
+    // إنشاء رابط WA.me
+    const encodedMessage = encodeURIComponent(whatsappMessage); // ترميز الرسالة للتأكد من سلامة البيانات
+    const whatsappLink = `https://wa.me/201044096035?text=${encodedMessage}`;
+
+    // توجيه المستخدم إلى الرابط
+    window.location.href = whatsappLink;
+});
 </script>
+
+<section id="about" class="about">
+    <div class="w3-container w3-padding-32" id="about">
+        <hr>
+        <h1 id="aboutTitle" data-translate-key="aboutTitle">الشركة</h1>
+        <p id="aboutContent" data-translate-key="aboutContent">مجموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء</p>
+        
+        <h1 id="missionTitle" data-translate-key="missionTitle">رسالة الشركة</h1>
+        <p id="missionContent" data-translate-key="missionContent">نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
+
+        <h1 id="ownerTitle" data-translate-key="ownerTitle">عن صاحب الشركة</h1>
+        <p id="ownerName" data-translate-key="ownerName"><strong>المهندس شنودة بشير</strong></p>
+        <p id="ownerContent" data-translate-key="ownerContent">يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.</p>
+
+        <div class="contact-info">
+            <h2 id="contactDetailsTitle" data-translate-key="contactDetailsTitle">لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:</h2>
+            <p id="contactPage" data-translate-key="contactPage">الرسائل على الصفحة: <a href="http://m.me/102254001195838">مجموعة المهنس الإنشائي شنودة بشير</a></p>
+            <p id="address" data-translate-key="address">مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: 
+                <a href="https://www.google.com/maps?q=27.213655,33.836384" target="_blank">
+                    موقع الشركة
+                </a>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p data-translate-key="footerText">© 2024 مجموعة المهندس الإنشائي شنودة بشير. جميع الحقوق محفوظة.</p>
+</footer>
+
 
 </body>
 </html>
