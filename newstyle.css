@@ -1,0 +1,872 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* تأثير عند تحميل الصفحة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* الرأس */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0; /* الهيدر يظل ثابتًا في أعلى الصفحة */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease;/* إضافة تأثير عند تغيير وضعية الهيدر */
+
+}
+
+
+/* حاوية اللوجو واسم الشركة */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* مسافة بين اللوجو واسم الشركة */
+}
+
+.logo-img {
+    width: 200px; /* تعديل حجم اللوجو */
+    align-items: center;
+}
+
+
+/* قائمة التنقل */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0px;
+    justify-content: center; /* توسيط العناصر داخل القائمة */
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: greenyellow;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Language selector container */
+#languageSelector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    text-align: center; /* لتوسيط النص */
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+/* Hover/Focus Effects for Language Selector */
+#languageSelector:hover,
+#languageSelector:focus {
+    background-color: white; /* Highlight on hover */
+    color: black; /* White text when active */
+    outline: none;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center everything */
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Spacing between stacked items */
+    }
+
+    #languageSelector {
+        margin-top: 15px; /* Space between language selector and menu */
+    }
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.square {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* twasal m3na */
+.projects, .contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.projects h2, .contact h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+/* قسم التواصل */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input, 
+.contact form select, 
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact form input:focus, 
+.contact form select:focus, 
+.contact form textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
+}
+
+.contact form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #34495e;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* تنسيق القسم "about" */
+#about {
+    background-color: white;
+    padding: 0px 0px;
+    font-family: Arial, sans-serif;
+}
+
+#about .w3-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.2em !important;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+#about #aboutContent {
+    text-align: justify;
+    padding: 0 15px;
+}
+
+#about #missionContent {
+    font-style: italic;
+    color: #777;
+}
+
+#about #ownerContent {
+    text-align: justify;
+    padding: 0 15px;
+}
+
+#about .contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+#about #contactDetailsTitle {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#about #contactPage, #about #address {
+    font-size: 1.1em;
+    color: #000; /* تغيير اللون إلى الأسود */
+    text-decoration: none;
+}
+
+#about #contactPage a, #about #address a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#about #contactPage a:hover, #about #address a:hover {
+    text-decoration: underline;
+}
+
+
+#about hr {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 1.5em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+
+    #about .w3-container {
+        padding: 0 15px;
+    }
+}
+
+
+
+
+/* mashareee3 */
+
+#projects {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* تنسيق قائمة المشاريع */
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: calc(33% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.project p {
+    font-size: 1.1em;
+    color: #555;
+    padding: 0 10px 20px;
+}
+
+/* تنسيق خانة التفاصيل */
+.project-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, pointer-events 0s 0.3s;
+}
+
+.project-details.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#projectDetails h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#projectDetails p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#submitBtn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* تصميم للمشاريع على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%;
+    }
+}
+/* تنسيق الموقع */
+.location {
+    font-size: 1.1em;
+    color: #888;
+    margin-bottom: 15px; /* إضافة مسافة بين الموقع والزر */
+    padding-left: 10px;
+}
+
+/* تنسيق زر الوصف */
+.description-button {
+    background-color: #FF9800; /* لون الزر */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* مسافة بين الأزرار */
+}
+
+.description-button:hover {
+    background-color: #FB8C00; /* تأثير التمرير على الزر */
+}
+
+/* تنسيق وصف المشروع */
+.project-description {
+    display: none; /* الوصف مخفي في البداية */
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.project-description.active {
+    display: block; /* إظهار الوصف عندما يتم تنشيطه */
+}
+
+.send-button {
+    background-color: #25D366; /* لون زر واتساب */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #128C7E; /* تأثير عند التمرير على الزر */
+}
+
+
+/* نافذة منبثقة */
+.modal {
+    display: none; /* مخفية بشكل افتراضي */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.property-option {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.property-option:hover {
+    background-color: #128C7E;
+}
+
+
+
+
+
+/* farek altswe*/
+
+#marketing-team {
+
+    margin-left: 20px;
+    padding: 50px 0px;
+    background-color: white;
+    text-align: center;
+}
+
+#supportTitle {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* تنسيق العناصر الخاصة بكل عضو في الفريق */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    width: 100%; /* التحكم في العرض */
+    max-width: 100%; /* لضمان التناسب في الشاشات الصغيرة */
+
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+/* معلومات العضو */
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team-img {
+    margin-bottom: 10px;
+}
+
+.team-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.team-name {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.team-role {
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.team-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    color: #007bff;
+    font-size: 1.2em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+}
+
+/* التباين بين الروابط */
+.team-links span {
+    margin: 0 10px;
+    color: #888;
+}
+
+/* إضافة ميديا كويري لتحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    #marketing-team {
+        padding: 20px 10px; /* تقليل المسافات على الشاشات الصغيرة */
+    }
+
+    .team-member {
+        width: 90%; /* جعل العناصر تأخذ 90% من العرض */
+        max-width: 100%; /* جعل العرض قابل للتغيير حسب حجم الشاشة */
+    }
+
+    .team-name {
+        font-size: 1.2em; /* تصغير حجم الاسم */
+    }
+
+    .team-role {
+        font-size: 1em; /* تصغير حجم الدور */
+    }
+
+    .team-image {
+        width: 80px; /* تصغير صورة العضو */
+        height: 80px; /* تصغير صورة العضو */
+    }
+
+    .social-icon {
+        font-size: 1.1em; /* تصغير حجم الأيقونات */
+    }
+}
+
+
+
+
+.slideshow-container {
+  width: 100%; /* يأخذ العرض الكامل للمحتوى */
+  max-width: 360px; /* أقصى عرض مناسب لجهاز محمول */
+  aspect-ratio: 9 / 16; /* الحفاظ على نسبة 1080x1920 */
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden; /* لإخفاء أي محتوى زائد عن الحدود */
+  border-radius: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide video {
+  width: 100%; /* يتمدد الفيديو ليغطي العرض */
+  height: 100%; /* يتناسب مع ارتفاع الـ slideshow */
+  object-fit: cover; /* يغطي المساحة بالكامل دون تشويه */
+  border-radius: 10px;
+}
+
+
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.slide-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center; /* لمحاذاة النص أفقيًا في المنتصف */
+
+}
+
+.buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button {
+
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.navigation {
+    position: relative;
+    bottom:10%; /* عدل الموضع ليلائم احتياجاتك */
+    width: 100%;
+    gap: 250px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(0);
+    padding: 0 10px; /* أضف مسافة حول الأزرار */
+}
+
+.nav-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.button-related {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.button-related:hover {
+  background-color: #1e7e34;
+}
+
+.hover-images {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 300px;
+}
+
+.hover-images img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.button-related:hover + .hover-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

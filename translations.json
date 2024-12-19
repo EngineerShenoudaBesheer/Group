@@ -1,0 +1,74 @@
+{
+  "ar": {
+    "projects": "المشاريع",
+    "about": "عن الشركة",
+    "marketingTeam": "فريق التسويق",
+    "contact": "تواصل معنا",
+    "arabic": "العربية",
+    "english": "الإنجليزية",
+    "german": "الألمانية",
+    "russian": "الروسية",
+    "french": "الفرنسية",
+    "spanish": "الإسبانية"
+  },
+  "en": {
+    "projects": "Projects",
+    "about": "About Us",
+    "marketingTeam": "Marketing Team",
+    "contact": "Contact Us",
+    "arabic": "Arabic",
+    "english": "English",
+    "german": "German",
+    "russian": "Russian",
+    "french": "French",
+    "spanish": "Spanish"
+  },
+  "de": {
+    "projects": "Projekte",
+    "about": "Über uns",
+    "marketingTeam": "Marketing-Team",
+    "contact": "Kontaktieren Sie uns",
+    "arabic": "Arabisch",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "russian": "Russisch",
+    "french": "Französisch",
+    "spanish": "Spanisch"
+  },
+  "ru": {
+    "projects": "Проекты",
+    "about": "О нас",
+    "marketingTeam": "Маркетинговая команда",
+    "contact": "Свяжитесь с нами",
+    "arabic": "Арабский",
+    "english": "Английский",
+    "german": "Немецкий",
+    "russian": "Русский",
+    "french": "Французский",
+    "spanish": "Испанский"
+  },
+  "fr": {
+    "projects": "Projets",
+    "about": "À propos",
+    "marketingTeam": "Équipe marketing",
+    "contact": "Contactez-nous",
+    "arabic": "Arabe",
+    "english": "Anglais",
+    "german": "Allemand",
+    "russian": "Russe",
+    "french": "Français",
+    "spanish": "Espagnol"
+  },
+  "es": {
+    "projects": "Proyectos",
+    "about": "Acerca de nosotros",
+    "marketingTeam": "Equipo de marketing",
+    "contact": "Contáctenos",
+    "arabic": "Árabe",
+    "english": "Inglés",
+    "german": "Alemán",
+    "russian": "Ruso",
+    "french": "Francés",
+    "spanish": "Español"
+  }
+}
